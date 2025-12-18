@@ -8,3 +8,8 @@ tailwind.css
 .env
 .vscode/
 .DS_Store
+
+#indesejados
+
+./src/index.html
+./src/login.html
