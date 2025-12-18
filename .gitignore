@@ -1,0 +1,10 @@
+# dependências
+node_modules/
+
+# arquivos gerados
+tailwind.css
+
+# ambiente / editor
+.env
+.vscode/
+.DS_Store
