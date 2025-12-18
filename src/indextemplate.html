@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link href="../tailwind.css" rel="stylesheet">
+    </head>
+    <body class="bg-gray-50 dark:bg-gray-800">
+        <div class="container mx-auto px-4 py-8 space-y-8">
+
+            <div>
+                <h6 class="dark:text-gray-50 font-bold mb-2">Componente Dropdown</h6>
+                <div class="relative">
+                    <button class="flex items-center bg-white border border-gray-300 cursor-pointer focus:outline-none focus:border-black rounded px-2 py-1 text-sm text-gray-800 placeholder-gray-300 focus:ring-2 focus:ring-blue-500 focus:ring-opacity-20 shadow" id="choices-btn">
+                        Botão
+                    <svg class="w-4 h-4 ml-3" data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"></path>path></svg>
+                    </button>
+
+                    <div class="absolute hidden w-[200px] bg-white border border-gray-200 py-1 shadow-md rounded-md" id="choices">
+                        <a
+                        href=""
+                        class="block text-sm text-gray-500 px-3 py-1 bg-white hover:bg-gray-100"
+                        >Link 1</a>
+
+                        <a
+                        href=""
+                        class="block text-sm text-gray-500 px-3 py-1 bg-white hover:bg-gray-100"
+                        >Link 2</a>
+
+                        <a
+                        href=""
+                        class="block text-sm text-gray-500 px-3 py-1 bg-white hover:bg-gray-100"
+                        >Link 3</a>
+
+                        <a
+                        href=""
+                        class="block text-sm text-gray-500 px-3 py-1 bg-white hover:bg-gray-100"
+                        >Link 4</a>
+
+                        <a
+                        href=""
+                        class="block text-sm text-gray-500 px-3 py-1 bg-white hover:bg-gray-100"
+                        >Link 5</a>
+                    </div>
+                </div>
+
+            </div>
+
+<hr class="dark:text-white text-black h-px">
+            <div>
+
+                <h6 class="dark:text-gray-50 font-bold mb-2">Componente Input</h6>
+
+                <div class="space-y-4">
+                <input
+                type="text"
+                class="w-full bg-gray-50 border border-gray-300 focus:outline-none focus:border-black rounded px-2 py-1 text-sm text-gray-800 placeholder-gray-300 focus:ring-2 focus:ring-blue-500 focus:ring-opacity-20 "
+                placeholder="Digite seu nome"
+                >
+
+                <input
+                type="text"
+                class="w-full bg-gray-50 border border-gray-300 focus:outline-none focus:border-blue-500 rounded px-2 py-1 text-sm text-gray-800 placeholder-gray-300 focus:ring-2 focus:ring-blue-500 focus:ring-opacity-20 "
+                placeholder="Digite seu nome 2"
+                >
+
+                <input
+                type="text"
+                class="w-full bg-gray-50 border border-gray-300 focus:outline-none focus:border-blue-500 rounded px-2 py-1 text-sm text-gray-800 placeholder-gray-300 focus:ring-2 focus:ring-blue-500 focus:ring-opacity-20 transition duration-200 ease-in-out"
+                placeholder="Digite seu nome com transicao"
+                >
+                </div>
+            </div>
+
+<hr class="dark:text-white text-black h-px">
+
+            <div class="flex flex-col gap-1.5">
+                <h6 class="dark:text-gray-50 font-bold mb-2">Componente Badge/Tag</h6>
+                <div>
+                    <div class="inline-flex item-center text-sm bg-green-100 px-1.5 py-0.5 rounded-md text-green-800 font-medium">
+                        Ativo
+                    </div>
+
+                    <div class="inline-flex item-center text-sm bg-green-100 px-1.5 py-0.5 rounded-full text-green-800 font-medium">
+                        Ativo
+                    </div>
+                </div>
+
+                <div>
+                    <div class="inline-flex item-center text-sm bg-red-100 px-1.5 py-0.5 rounded-md text-red-800 font-medium">
+                        Inativo
+                    </div>
+
+                    <div class="inline-flex item-center text-sm bg-red-100 px-1.5 py-0.5 rounded-full text-red-800 font-medium">
+                        Inativo
+                    </div>
+                </div>
+
+                <div>
+                    <div class="inline-flex item-center text-sm bg-yellow-100 px-1.5 py-0.5 rounded-md text-yellow-800 font-medium">
+                        Em Progresso
+                    </div>
+
+                    <div class="inline-flex item-center text-sm bg-yellow-100 px-1.5 py-0.5 rounded-full text-yellow-800 font-medium">
+                        Em Progresso
+                    </div>
+                </div>
+
+                <div>
+                    <div class="inline-flex item-center text-sm bg-blue-100 px-1.5 py-0.5 rounded-md text-blue-800 font-medium">
+                        Aguardando
+                    </div>
+
+                    <div class="inline-flex item-center text-sm bg-blue-100 px-1.5 py-0.5 rounded-full text-blue-800 font-medium">
+                        Aguardando
+                    </div>
+                </div>
+            </div>
+<hr class="dark:text-white text-black">
+            <div>
+                <h6 class="dark:text-gray-50 font-bold mb-2">Component Button</h6>
+                <button class="bg-blue-500 px-4 py-1 rounded text-white shadow hover:bg-blue-600 cursor-pointer text-sm">
+                    Save
+                </button>
+
+                <button class="bg-blue-500 px-6 py-2 rounded text-white shadow hover:bg-blue-600 cursor-pointer text-sm">
+                    Save
+                </button>
+
+                <button class="bg-blue-500 px-8 py-3 rounded text-white shadow hover:bg-blue-600 cursor-pointer text-base">
+                    Save
+                </button>
+            </div>
+<hr class="dark:text-white text-black">
+            <div>
+                <h6 class="dark:text-gray-50 font-bold mb-2">Component Card</h6>
+    
+                <div class="bg-white dark:bg-gray-700 rounded-lg shadow-md overflow-hidden">
+                    <div class="w-full bg-gray-100 dark:bg-gray-900 p-4 border-b border-gray-200 dark:border-gray-500">
+                        <h4 class="font-bold dark:text-gray-50">Título do card</h4>
+                    </div>
+    
+                    <div class="p-4 dark:text-gray-50">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste quidem nisi vitae quo omnis sapiente magnam quam in amet iure veritatis expedita rerum maiores harum molestiae, perferendis deserunt voluptate dolores.
+                    </div>
+    
+                    <div class="dark:text-gray-50 w-full bg-gray-50 dark:bg-gray-900 p-3 border-t border-gray-100 dark:border-gray-500">
+                        Rodapé
+                    </div>
+                </div>
+            </div>
+            </div>
+            <script src="script.js"></script>
+    </body>
+</html>
