@@ -11,5 +11,5 @@ tailwind.css
 
 #indesejados
 
-./src/index.html
-./src/login.html
+index.html
+login.html
