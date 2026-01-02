@@ -7,3 +7,4 @@ loginBtn.addEventListener('click', () => {
     window.location.href = './decolar.html'    
     }, 2000);
 });
+

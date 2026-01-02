@@ -43,11 +43,11 @@
 
             <div class="w-full max-w-3xl bg-white/10 p-4 rounded-xl backdrop-blur-sm">
                 <form class="flex flex-col md:flex-row gap-3">
-                    <select class="flex-1 bg-gray-50 px-4 py-3 rounded-lg text-gray-600 outline-none focus:ring-2 focus:ring-yellow-500 transition">
+                    <select id="estado" class="flex-1 bg-gray-50 px-4 py-3 rounded-lg text-gray-600 outline-none focus:ring-2 focus:ring-yellow-500 transition">
                         <option value="">Escolha o estado</option>
                     </select>
 
-                    <select class="flex-1 bg-gray-50 px-4 py-3 rounded-lg text-gray-600 outline-none focus:ring-2 focus:ring-yellow-500 transition">
+                    <select id="cidade" class="flex-1 bg-gray-50 px-4 py-3 rounded-lg text-gray-600 outline-none focus:ring-2 focus:ring-yellow-500 transition" disabled>
                         <option value="">Escolha a cidade</option>
                     </select>
 
@@ -136,6 +136,54 @@
         btn.addEventListener('click', () => {
             menu.classList.toggle('hidden');
         });
+
+    const selectEstados = document.getElementById('estado');
+    const selectCidade = document.getElementById('cidade');
+
+    selectEstados.addEventListener('change', async () => {
+    const estado = selectEstados.value;
+
+    selectCidade.innerHTML = '<option value="">Escolha a cidade</option>';
+    if (!estado) {
+        selectCidade.disabled = true;
+        return;
+    }
+
+    selectCidade.disabled = false;
+
+    const url = `https://brasilapi.com.br/api/ibge/municipios/v1/${estado}`;
+
+    try {
+        const resp = await fetch(url);
+        const data = await resp.json();
+
+    data.forEach(cidade => {
+        const option = document.createElement('option');
+        option.value = cidade.nome;
+        option.textContent = cidade.nome;
+        selectCidade.appendChild(option);
+    });
+    } catch(erro) {
+        console.error('Erro ao carregar cidades', erro);
+    }
+    });
+
+    async function carregarEstados() {
+        const url = `https://brasilapi.com.br/api/ibge/uf/v1`;
+        const resp = await fetch(url);
+        const data = await resp.json();
+
+        data.sort((a,b) => a.nome.localeCompare(b.nome));
+
+        data.forEach(estados => {
+            const option = document.createElement('option');
+            option.value = estados.sigla;
+            option.textContent = estados.nome;
+            selectEstados.appendChild(option);
+        });
+    }
+
+    carregarEstados();
     </script>
 
 </body>
